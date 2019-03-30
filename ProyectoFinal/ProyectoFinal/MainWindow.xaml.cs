@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace ProyectoFinal
 {
@@ -20,9 +22,28 @@ namespace ProyectoFinal
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        DBconexion db = new DBconexion();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnAcceder_Click(object sender, RoutedEventArgs e)
+        {
+            DataTable response = new DataTable();
+            response = db.Autenticar(Username.Text, Password.Password);
+            if (response != null)
+            {
+                if(response.Rows.Count > 0)
+                {
+                    MessageBox.Show("Bienvenido " + response.Rows[0][1].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("datos erroneos");
+                }
+            }
         }
     }
 }
