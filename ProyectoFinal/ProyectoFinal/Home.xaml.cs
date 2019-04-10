@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using System.Data;
 using System.Collections;
+using ProyectoFinal.Properties;
 
 
 namespace ProyectoFinal
@@ -17,13 +18,16 @@ namespace ProyectoFinal
 
         public void user()
         {
-            DataTable respuesta = new DataTable();
+            DataTable res = new DataTable();
             string s = "";
             if (id < 100)
+            {
                 s = "Select* From administrador Where adminID = @id";
+                Frame.Navigate(new test1());
+            }
             else if (id < 300 && id >= 100)
                 s = "Select* From enfermera Where enfermeraID = @id";
-            else if(id >= 300 )
+            else if (id >= 300)
                 s = "Select* From Doctor Where doctorID = @id";
             
             ArrayList nombres = new ArrayList();
@@ -32,12 +36,12 @@ namespace ProyectoFinal
             nombres.Add("@id");
             values.Add(id);
             
-            respuesta = db.Consulta(s, nombres, values);
+            res = db.Consulta(s, nombres, values);
 
-            if (respuesta != null)
+            if (res != null)
             {
-                if (respuesta.Rows.Count > 0)
-                    txtnombre.Content = respuesta.Rows[0][2].ToString();
+                if (res.Rows.Count > 0)
+                    txtnombre.Content = res.Rows[0][2].ToString().Trim() +" "+ res.Rows[0][3].ToString().Trim();
                 else
                     MessageBox.Show("parece que hubo un error");
             }

@@ -23,13 +23,10 @@
                 <materialDesign:PackIcon Kind="Logout" Width="26" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Center"/>
             </Button>
             <Label Content="Bienvenido!" HorizontalAlignment="Left" Margin="25,0,0,25" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontFamily="Roboto Medium" FontSize="20"/>
-            <Label x:Name="txtnombre" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontFamily="Roboto" FontSize="16" Width="auto"/>
+            <Label x:Name="txtnombre" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontFamily="Roboto" FontSize="16" Width="300"/>
         </Grid>
         <Grid Grid.Row="1" Background="#FF2D2D30">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="299*"/>
-                <ColumnDefinition Width="51*"/>
-            </Grid.ColumnDefinitions>
+            <Frame x:Name="Frame" HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="350"/>
         </Grid>
     </Grid>
 </Window>
