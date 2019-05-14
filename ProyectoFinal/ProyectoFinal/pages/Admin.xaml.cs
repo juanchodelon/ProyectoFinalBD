@@ -13,14 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProyectoFinal
+namespace ProyectoFinal.pages
 {
     /// <summary>
-    /// Lógica de interacción para test1.xaml
+    /// Lógica de interacción para Admin.xaml
     /// </summary>
-    public partial class test1 : Page
+    public partial class Admin : Page
     {
-        public test1()
+        public string dato;
+        public Admin()
         {
             InitializeComponent();
         }

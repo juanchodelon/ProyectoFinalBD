@@ -32,7 +32,7 @@ namespace ProyectoFinal
                 nombres.Add("@password");
                 values.Add(Username.Text);
                 values.Add(Password.Password);
-
+       
                 response = db.Consulta(s, nombres, values);
                 nombres.Clear();
                 values.Clear();
@@ -42,7 +42,7 @@ namespace ProyectoFinal
                     if (response.Rows.Count > 0)
                     {
                         Home home = new Home();
-                        home.id = Convert.ToInt32(response.Rows[0][0]);
+                        home.datos = response;
                         home.user();
                         home.Show();
                         this.Close();

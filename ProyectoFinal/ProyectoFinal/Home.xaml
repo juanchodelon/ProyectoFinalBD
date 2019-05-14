@@ -9,24 +9,38 @@
         xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF" 
         fw:AcrylicWindow.Enabled="True" 
         fw:AcrylicWindow.ShowTitleBar="False" AllowsTransparency="True"
-        Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#192D2D30" BorderBrush="Black">
-    <Grid HorizontalAlignment="Left" Height="500" Margin="0,0,0,0" VerticalAlignment="Top" Width="350">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid fw:PointerTracker.Enabled="True" Background="#01FFFFFF">
+        Height="500" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#192D2D30" BorderBrush="Black">
+    <Grid HorizontalAlignment="Left" Height="500" Margin="0,0,0,0" VerticalAlignment="Top" Width="1000">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" fw:PointerTracker.Enabled="True" Background="#01FFFFFF">
+            <Button x:Name="btnLogout" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0,0" Click="BtnLogout_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Padding="0">
+                <materialDesign:PackIcon Kind="Logout" Width="26" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Left"/>
+            </Button>
+            <Label x:Name="txtnombre"  HorizontalAlignment="Left" Margin="10,0,0,25" VerticalAlignment="Bottom" Foreground="#FFFFFFFF" FontFamily="Raleway" FontSize="14"/>
+
+            <StackPanel x:Name="menuSupervisor" HorizontalAlignment="Left" Height="400" Margin="0,50,0,0" VerticalAlignment="Top" Width="250" Visibility="Hidden">
+                <Label Content="Mantenimiento" Foreground="White" FontFamily="Raleway Medium" FontSize="20" Margin="10,0,0,0" Height="40"/>
+                <Button x:Name="roles" Content="Roles" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Roles_Click"/>
+                <Button x:Name="esp" Content="Especializacion" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Esp_Click"/>
+                <Button x:Name="habitacion" Content="Habitaciones" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Habitacion_Click"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#FF2D2D30">
             <Button x:Name="btnClose" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0,0" Click="Close_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
                 <materialDesign:PackIcon Kind="Close" Width="26" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Center"/>
             </Button>
-            <Button x:Name="btnLogout" HorizontalAlignment="Right" Margin="0,0,40,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0,0" Click="BtnLogout_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Padding="0">
-                <materialDesign:PackIcon Kind="Logout" Width="26" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Center"/>
-            </Button>
-            <Label Content="Bienvenido!" HorizontalAlignment="Left" Margin="25,0,0,25" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontFamily="Roboto Medium" FontSize="20"/>
-            <Label x:Name="txtnombre" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Center" Foreground="#FFFFFFFF" FontFamily="Roboto" FontSize="16" Width="300"/>
-        </Grid>
-        <Grid Grid.Row="1" Background="#FF2D2D30">
-            <Frame x:Name="Frame" HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="350"/>
+            <Label x:Name="lblTitulo" Content="Label" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Raleway Medium"/>
+            <ScrollViewer VerticalAlignment="Bottom" Height="410" Width="750" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <Frame x:Name="Frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Bottom" Width="Auto"/>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>

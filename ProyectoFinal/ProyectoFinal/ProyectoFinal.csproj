@@ -64,8 +64,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="pages\test1.xaml.cs">
-      <DependentUpon>test1.xaml</DependentUpon>
+    <Compile Include="pages\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Doctor.xaml.cs">
+      <DependentUpon>Doctor.xaml</DependentUpon>
     </Compile>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
@@ -87,12 +90,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\test1.xaml">
+    <Page Include="pages\Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Doctor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Enfermera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\manRoles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\Enfermera.xaml.cs">
+      <DependentUpon>Enfermera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\manRoles.xaml.cs">
+      <DependentUpon>manRoles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,5 +140,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

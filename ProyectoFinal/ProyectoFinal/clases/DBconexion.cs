@@ -13,8 +13,7 @@ namespace ProyectoFinal
     {
         public SqlConnection connect;
         public SqlCommand comand = new SqlCommand();
-        public string sql; 
-        public string cadena = "Server=DESKTOP-A0IQO3P\\SQLEXPRESS;Database=IGSS;user id=sa;Password=database";
+        public string cadena = "Server=JUAN\\SQLEXPRESS;Database=IGSS;user id=sa;Password=database";
         
         public DataTable Consulta(string _sql, ArrayList Nombre, ArrayList Valor)
         {
@@ -41,5 +40,37 @@ namespace ProyectoFinal
             }//fin using
             return Tabla;
         }
+
+        public string crud(string _sql, ArrayList Nombre, ArrayList Valor)
+        {
+            SqlParameter parametro;
+            string resultado = "";
+            try
+            {
+                using (connect = new SqlConnection(cadena))
+                {
+                    connect.Open();
+                    comand.CommandType = CommandType.Text;
+                    comand.CommandText = _sql;
+                    comand.Connection = connect;
+                    if (Nombre != null)
+                        for (short x = 0; x < Nombre.Count; x++)
+                        {
+                            parametro = new SqlParameter();
+                            parametro.ParameterName = Nombre[x].ToString();
+                            parametro.Value = Valor[x].ToString();
+                            comand.Parameters.Add(parametro);
+                        }
+                    comand.ExecuteNonQuery();
+                    resultado = "operacion exitosa";
+                    comand.Parameters.Clear();
+                }
+            }
+            catch (Exception error)
+            {
+                resultado = "Error: " + error.Message;
+            }
+            return resultado;
+        }//fin crud
     }
 }
