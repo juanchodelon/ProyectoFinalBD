@@ -24,7 +24,7 @@
 
         <Grid Grid.Row="0" Grid.Column="1">
             <Label Content="Sistema Bases de Datos" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="White" FontSize="24" FontFamily="Roboto Medium"/>
-            <Label Content="Alpha 2.3.0" Margin="0,60,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF686868" FontFamily="Roboto"/>
+            <Label Content="Alpha 3.5.0" Margin="0,60,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF686868" FontFamily="Roboto"/>
         </Grid>
         
         <Grid Grid.Column="1" Grid.Row="1">

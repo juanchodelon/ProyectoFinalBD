@@ -51,41 +51,42 @@ namespace ProyectoFinal.pages
             else
             {
                 txtbox1.IsEnabled = false;
-                txtbox1.Text = " ";
-                lblDelete.Content = " ";
+                txtbox1.Text = txtNew.Text = " ";
+                lblDelete.Content = resultado.Content = resultadoDel.Content = resultadoNew.Content = " ";
             }
         }
         private void Actualizar_Click(object sender, RoutedEventArgs e)
         {
-            string s = "Update rol Set nombre=@rol Where rolID=@id";
+            string s = "Update " + tabla + " Set nombre=@nombre Where ID=@id";
             ArrayList nombres = new ArrayList();
             ArrayList values = new ArrayList();
 
-            nombres.Add("@rol");
+            nombres.Add("@nombre");
             nombres.Add("@id");
             values.Add(txtbox1.Text);
             values.Add(codigo);
 
             resultado.Content = db.crud(s, nombres, values);
-
+            consulta(tabla);
         }
 
         private void BtnCrear_Click(object sender, RoutedEventArgs e)
         {
-            string s = "Insert Into " + tabla + " (nombre) Values(@rol)";
+            string s = "Insert Into " + tabla + " (nombre) Values(@nombre)";
 
             ArrayList nombres = new ArrayList();
             ArrayList values = new ArrayList();
 
-            nombres.Add("@rol");
+            nombres.Add("@nombre");
             values.Add(txtNew.Text);
 
             resultadoNew.Content = db.crud(s, nombres, values);
+            consulta(tabla);
         }
 
         private void BtnBorrar(object sender, RoutedEventArgs e)
         {
-            string s = "Delete From rol Where ID=@id";
+            string s = "Delete From " + tabla + " Where ID=@id";
 
             ArrayList nombres = new ArrayList();
             ArrayList values = new ArrayList();
@@ -96,6 +97,7 @@ namespace ProyectoFinal.pages
             values.Add(codigo);
 
             resultadoDel.Content = db.crud(s, nombres, values);
+            consulta(tabla);
         }
 
     }
