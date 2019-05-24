@@ -33,13 +33,16 @@ namespace ProyectoFinal
             {
                 lblTitulo.Content = "Roles";
                 menuSupervisor.Visibility = Visibility.Visible;
+                menuAdmin.Visibility = Visibility.Hidden;
                 mantenimiento.consulta("rol");
                 Frame.Navigate(mantenimiento);
             }
-            else if (rol == 2)
+            else if (rol == 3)
             {
-                Frame.Navigate(enfermera);
+                lblTitulo.Content = "Asignacion de habitaciones";
+                Frame.Navigate(new pages.Admin());
                 menuSupervisor.Visibility = Visibility.Hidden;
+                menuAdmin.Visibility = Visibility.Visible;
             }
             else if (rol == 1)
             {
@@ -63,31 +66,21 @@ namespace ProyectoFinal
                     MessageBox.Show("parece que hubo un error");
             }
         }
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
 
         private void Roles_Click(object sender, RoutedEventArgs e)
         {
             lblTitulo.Content = "Roles";
             mantenimiento.consulta("rol");
         }
-
         private void Esp_Click(object sender, RoutedEventArgs e)
         {
             lblTitulo.Content = "Especializacion";
             mantenimiento.consulta("especialidad");
         }
-
         private void Habitacion_Click(object sender, RoutedEventArgs e)
         {
-            lblTitulo.Content = "Habitaciones";
-            mantenimiento.consulta("habitacion");
+            lblTitulo.Content = "sectores";
+            mantenimiento.consulta("sector");
         }
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
@@ -96,6 +89,14 @@ namespace ProyectoFinal
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
+        }
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

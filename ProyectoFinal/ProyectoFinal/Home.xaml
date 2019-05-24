@@ -27,8 +27,12 @@
                 <Label Content="Mantenimiento" Foreground="White" FontFamily="Raleway Medium" FontSize="20" Margin="10,0,0,0" Height="40"/>
                 <Button x:Name="roles" Content="Roles" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Roles_Click"/>
                 <Button x:Name="esp" Content="Especializacion" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Esp_Click"/>
-                <Button x:Name="habitacion" Content="Habitaciones" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Habitacion_Click"/>
+                <Button x:Name="habitacion" Content="sectores" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Habitacion_Click"/>
+            </StackPanel>
 
+            <StackPanel x:Name="menuAdmin" HorizontalAlignment="Left" Height="400" Margin="0,50,0,0" VerticalAlignment="Top" Width="250" Visibility="Hidden">
+                <Label Content="Administracion" Foreground="White" FontFamily="Raleway Medium" FontSize="20" Margin="10,0,0,0" Height="40"/>
+                <Button x:Name="Asign" Content="Asignar habitaciones" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}"/>
             </StackPanel>
 
         </Grid>
