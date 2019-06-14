@@ -1,0 +1,20 @@
+﻿<Page x:Class="ProyectoFinal.pages.aPasientes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinal.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="aPasientes"  Width="750" Height="599">
+
+    <Grid>
+        <DataGrid x:Name="dgPasiente" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="730" SelectionChanged="DGenfermeras_SelectionChanged"/>
+        <ComboBox x:Name="cbDoctores" IsEnabled="False" HorizontalAlignment="Left" Margin="173,290,0,0" VerticalAlignment="Top" Width="120" Foreground="White" BorderBrush="White"/>
+        <Button x:Name="btnasignar" IsEnabled="False" Content="Asignar" HorizontalAlignment="Left" Margin="348,290,0,0" VerticalAlignment="Top" Width="94" BorderBrush="{x:Null}" Foreground="White" Background="#FF686868" Click="Btnasignar_Click"/>
+        <Label Content="Asignar pasiente a un docotor" HorizontalAlignment="Left" Margin="13,252,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF"/>
+        <ComboBox x:Name="cbespe" IsEnabled="False" HorizontalAlignment="Left" Margin="13,290,0,0" VerticalAlignment="Top" Width="120" Foreground="White" BorderBrush="White" DropDownClosed="Sector_DropDownClosed"/>
+        <Label x:Name="resultado" Content="Label" HorizontalAlignment="Left" Margin="13,335,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF"/>
+
+    </Grid>
+</Page>

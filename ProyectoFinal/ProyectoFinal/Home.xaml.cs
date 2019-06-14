@@ -94,6 +94,19 @@ namespace ProyectoFinal
         {
             this.Close();
         }
+
+        private void Asign_Click(object sender, RoutedEventArgs e)
+        {
+            lblTitulo.Content = "asignacion de habitaciones";
+            Frame.Navigate(new pages.Admin());
+        }
+
+        private void AsignPas_Click(object sender, RoutedEventArgs e)
+        {
+            lblTitulo.Content = "asignacion de pasientes";
+            Frame.Navigate(new pages.aPasientes());
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
