@@ -34,6 +34,8 @@
                 <Label Content="Administracion" Foreground="White" FontFamily="Raleway Medium" FontSize="20" Margin="10,0,0,0" Height="40"/>
                 <Button x:Name="Asign" Content="Asignar habitaciones" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Asign_Click"/>
                 <Button x:Name="AsignPas" Content="Asignar Pasientes" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="AsignPas_Click"/>
+                <Button x:Name="Reportes" Content="Ver reportes" d:LayoutOverrides="Height" Foreground="White" HorizontalContentAlignment="Left" FontSize="14" Background="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="Reportes_Click"/>
+
             </StackPanel>
 
         </Grid>
@@ -43,7 +45,7 @@
                 <materialDesign:PackIcon Kind="Close" Width="26" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Center"/>
             </Button>
             <Label x:Name="lblTitulo" Content="Label" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Raleway Medium"/>
-            <ScrollViewer VerticalAlignment="Bottom" Height="410" Width="750" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ScrollViewer VerticalAlignment="Bottom" Height="410" Width="750" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <Frame x:Name="Frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Bottom" Width="Auto"/>
             </ScrollViewer>
         </Grid>

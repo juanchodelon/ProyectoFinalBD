@@ -107,6 +107,12 @@ namespace ProyectoFinal
             Frame.Navigate(new pages.aPasientes());
         }
 
+        private void Reportes_Click(object sender, RoutedEventArgs e)
+        {
+            lblTitulo.Content = "Reportes";
+            Frame.Navigate(new pages.reportes());
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

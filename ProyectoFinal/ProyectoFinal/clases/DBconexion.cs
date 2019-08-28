@@ -13,7 +13,7 @@ namespace ProyectoFinal
     {
         public SqlConnection connect;
         public SqlCommand comand = new SqlCommand();
-        public string cadena = "Server=JUAN\\SQLEXPRESS;Database=IGSS;user id=sa;Password=database";
+        public string cadena = "Server=172.17.184.114;Database=IGSS;user id=sa;Password=database";
         
         public DataTable Consulta(string _sql, ArrayList Nombre, ArrayList Valor)
         {

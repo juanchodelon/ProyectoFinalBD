@@ -1,0 +1,31 @@
+﻿<Page x:Class="ProyectoFinal.pages.reportes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinal.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1300"
+      Title="reportes" Width="750" Height="1300">
+
+    <Grid>
+        <DataGrid x:Name="dgdocs" HorizontalAlignment="Left" Height="209" Margin="10,54,0,0" VerticalAlignment="Top" Width="730"/>
+        <DataGrid x:Name="dghosps" HorizontalAlignment="Left" Height="209" Margin="10,381,0,0" VerticalAlignment="Top" Width="730"/>
+        <DataGrid x:Name="dgcons" HorizontalAlignment="Left" Height="209" Margin="10,700,0,0" VerticalAlignment="Top" Width="730"/>
+        <DataGrid x:Name="dgenfs" HorizontalAlignment="Left" Height="209" Margin="10,1021,0,0" VerticalAlignment="Top" Width="730"/>
+        <Label Content="numero de doctores por especialidad" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+        <DatePicker x:Name="dp1" HorizontalAlignment="Left" Margin="10,333,0,0" VerticalAlignment="Top" Width="208" Foreground="Black" BorderBrush="#FFFFFFFF"/>
+        <DatePicker x:Name="dp2" HorizontalAlignment="Left" Margin="259,333,0,0" VerticalAlignment="Top" Width="208" Foreground="Black" BorderBrush="#FFFFFFFF"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="506,326,0,0" VerticalAlignment="Top" Width="75" Background="#FF686868" Foreground="White" Click="Button_Click"/>
+        <DatePicker x:Name="dp3" HorizontalAlignment="Left" Margin="10,656,0,0" VerticalAlignment="Top" Width="208" Foreground="Black" BorderBrush="#FFFFFFFF" Background="{x:Null}"/>
+        <DatePicker x:Name="dp4" HorizontalAlignment="Left" Margin="259,656,0,0" VerticalAlignment="Top" Width="208" Foreground="Black" BorderBrush="#FFFFFFFF"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="506,649,0,0" VerticalAlignment="Top" Width="75" Background="#FF686868" Foreground="White" Click="Button_Click_1"/>
+        <Label Content="hospitalizaciones" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+        <Label Content="citas" HorizontalAlignment="Left" Margin="10,625,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+        <DatePicker x:Name="dp6" HorizontalAlignment="Left" Margin="10,977,0,0" VerticalAlignment="Top" Width="208" Foreground="Black" BorderBrush="#FFFFFFFF" Background="{x:Null}"/>
+        <DatePicker x:Name="dp7" HorizontalAlignment="Left" Margin="259,977,0,0" VerticalAlignment="Top" Width="208" Foreground="Black" BorderBrush="#FFFFFFFF"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="506,970,0,0" VerticalAlignment="Top" Width="75" Background="#FF686868" Foreground="White" Click="Button_Click_2"/>
+        <Label Content="enfermedadess" HorizontalAlignment="Left" Margin="10,946,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+
+    </Grid>
+</Page>
